@@ -24,8 +24,7 @@
                         aria-label="Task"
                         v-model="task.title"
                         @keyup.enter="addItem"
-                        @keydown.delete.prevent
-                        @keyup.delete="deleteItem(i)"
+                        @keydown.delete="deleteItemIfEmpty(i)"
                         v-focus
                     />
                     <button @click="deleteItem(i)">x</button>
