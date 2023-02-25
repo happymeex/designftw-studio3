@@ -25,7 +25,7 @@
                         v-model="task.title"
                         @keyup.enter="addItem"
                         @keydown.delete="deleteItemIfEmpty(i)"
-                        v-focus
+                        v-focus="task.active"
                     />
                     <button @click="deleteItem(i)">x</button>
                 </li>
